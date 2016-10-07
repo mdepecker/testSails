@@ -30,7 +30,7 @@ module.exports = {
         onPassportAuth.bind(this,req,res))(req,res);
     },
     signup : function (req,res) {
-        User()
+        User
             .create(_.omit(req.allParams(),'id'))
             .then(function(user){
                 return {
